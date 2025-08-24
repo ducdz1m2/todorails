@@ -1,0 +1,38 @@
+{
+    // Sử dụng Ruby và các extension liên quan
+    "ruby.interpreter.commandPath": "/usr/bin/ruby", // chỉnh path ruby trong WSL nếu cần
+    "ruby.useBundler": true,
+    "ruby.useLanguageServer": true,
+    "ruby.format": "rubocop",
+    // Emmet cho .erb, .html.erb, .html
+    "emmet.includeLanguages": {
+        "erb": "html",
+        "html.erb": "html",
+        "ruby": "html"
+    },
+    "emmet.syntaxProfiles": {
+        "html": {
+            "self_closing_tag": "xhtml"
+        }
+    },
+    "emmet.triggerExpansionOnTab": true,
+    // Hỗ trợ cho Tailwind, Bootstrap...
+    "css.validate": true,
+    "scss.validate": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    // Format
+    "[ruby]": {
+        "editor.defaultFormatter": "Shopify.ruby-lsp"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.formatOnSave": true,
+    // Nếu đang dùng WSL
+    "remote.WSL.fileWatcher.polling": true
+}

@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center mx-5 ">
+    <div id="<%= dom_id task %>">
+        <h2>
+            <%= task.title %>
+        </h2>
+
+
+        <i>
+
+            <%= task.description %>
+            </p>
+        </i>
+        <p>
+            <strong>Complete:</strong>
+            <%= check_box_tag "task_complete", "true", task.complete, disabled: true %>
+
+        </p>
+
+    </div>
+</div>
