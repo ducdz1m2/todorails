@@ -1,0 +1,19 @@
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <% if notice %>
+    <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            <%= notice %>
+        </div>
+    </div>
+    <% end %>
+</div>
+
+<script>
+    document.addEventListener("turbo:load", () => {
+        const toastel = document.getElementById('liveToast');
+        if (toastel) {
+            const toast = new bootstrap.Toast(toastel);
+            toast.show();
+        }
+    });
+</script>
